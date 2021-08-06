@@ -1,3 +1,71 @@
 @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+
+body {
+
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+}
+
+.contenedor__seccion1 {
+    background-color: rgb(213, 184, 245);
+    text-align: center;
+
+}
+.contenedor__seccion1--button {
+    padding: 5% 5% 5% 5%;
+
+}
+
+.seccion__video {
+text-align: center;
+padding: 1rem;
+
+}
+#video {
+    border-radius:10px;
+}
+
+.contenedor__seccion2 {
+    background-color: rgb(219, 211, 228);
+}
+
+.contenedor__seccion2--botones {
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+}
+
+.contenedor__seccion2--consulta {
+    border-radius: 10px;
+    padding: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.card-body{
+/* background-color: chartreuse; */
+width: 15rem;
+height: 12rem;
+}
+
+sup {
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: var(--orange);
+  }
+
+  img {
+      width: 20%;
+  }
+
+  input {
+      border-radius: 10px;
+      height: 41px;
+  }
