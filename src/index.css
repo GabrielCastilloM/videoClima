@@ -8,22 +8,24 @@ body {
 
 .contenedor {
     display: grid;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-gap: 20px;
 }
 
 .contenedor__seccion1 {
     background-color: rgb(213, 184, 245);
     text-align: center;
+    margin-left: 25px;
 
 }
 .contenedor__seccion1--button {
-    padding: 5% 5% 5% 5%;
+    padding: 5% 5% 1% 5%;
 
 }
 
 .seccion__video {
 text-align: center;
-padding: 1rem;
+padding: 10px;
 
 }
 #video {
@@ -32,6 +34,7 @@ padding: 1rem;
 
 .contenedor__seccion2 {
     background-color: rgb(219, 211, 228);
+    margin-right: 28px
 }
 
 .contenedor__seccion2--botones {
@@ -47,7 +50,6 @@ padding: 1rem;
     justify-content: space-evenly;
 }
 
-
 .card-body{
 /* background-color: chartreuse; */
 width: 15rem;
@@ -59,13 +61,13 @@ sup {
     border-radius: 30px;
     color: var(--text_light);
     background: var(--orange);
-  }
+}
 
-  img {
-      width: 20%;
-  }
+img {
+    width: 20%;
+}
 
-  input {
-      border-radius: 10px;
-      height: 41px;
-  }
+input {
+    border-radius: 10px;
+    height: 41px;
+}
