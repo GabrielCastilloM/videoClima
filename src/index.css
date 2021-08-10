@@ -7,15 +7,16 @@ body {
 }
 
 .contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-gap: 15px
 }
 
 .contenedor__seccion1 {
     background-color: rgb(213, 184, 245);
     text-align: center;
-    margin-left: 25px;
+    width: 40rem;
 
 }
 .contenedor__seccion1--button {
@@ -34,7 +35,7 @@ padding: 10px;
 
 .contenedor__seccion2 {
     background-color: rgb(219, 211, 228);
-    margin-right: 28px
+    width: 40rem;
 }
 
 .contenedor__seccion2--botones {
