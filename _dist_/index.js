@@ -101,7 +101,7 @@ const pintarInformacion = (datos) => {
           <h5 class="card-title">${datos.name}
           <sup>${datos.sys.country}</sup>
           </h5>
-            <p >Temperatura ${(convertirKelvinACentigrados(datos))}° </p>
+            <p >Temperatura ${(convertirKelvinACentigrados(datos))}°C</p>
             <img class="city-icon" src="${icon}">
             <p class="card-text" id="card">${datos.weather[0]["description"]}</p>
             <p class="card-text" id="card"></p>
