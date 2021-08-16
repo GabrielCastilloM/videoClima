@@ -91,23 +91,28 @@ const pintarInformacion = (datos) => {
   const papa = document.querySelector('.contenedor__seccion2--consulta')
   papa.insertAdjacentHTML('beforeend', userTemplate(datos));
 }
+
   //funcion crea el template de la tarjeta
   function userTemplate(datos) {
     const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${datos.weather[0]["icon"]}.svg`;
-    const temperatura = datos.main.temp
-    const temperaturaConvertidaString = temperatura.toString()
-    const temperatoraAGrados = temperaturaConvertidaString.substring(0, temperaturaConvertidaString.length - 4)
     return `
     <div class="card mb-2 shadow">
           <div class="card-body">
           <h5 class="card-title">${datos.name}
           <sup>${datos.sys.country}</sup>
           </h5>
-            <p >Temperatura ${(temperatoraAGrados)}° </p>
+            <p >Temperatura ${(convertirKelvinACentigrados(datos))}° </p>
             <img class="city-icon" src="${icon}">
             <p class="card-text" id="card">${datos.weather[0]["description"]}</p>
             <p class="card-text" id="card"></p>
           </div>
         </div>
     `;
+  }
+
+  const convertirKelvinACentigrados = (datos) => {
+    const temperaturaKelvin = datos.main.temp
+    const unidadDiferencia = (-273.15)
+    const temperaturaCentigrados = Math.trunc(temperaturaKelvin+unidadDiferencia) 
+    return temperaturaCentigrados
   }
